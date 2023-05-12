@@ -1,0 +1,891 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Prompt:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --sky-blue: #49c6e5;
+    --sky-blue-light: #54defd;
+    --snow: #fffbfa;
+    --mint: #00ba9d;
+    --tiffany-blue: #8bd7d2;
+    --text-color: #1b1b1b;
+
+
+    --box-shadow: 2px 2px 10px 4px rgb(14 55 54 / 15%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Prompt', sans-serif;
+    scroll-padding-top: 4rem;
+    cursor: default;
+}
+
+.check {
+    color: #fd7e13;
+}
+
+.star {
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+* a {
+    text-decoration: none;
+    color: #1b1b1b;
+}
+
+* li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* 49c6e5-54defd-fffbfa-00bd9d-8bd7d2 */
+
+/* navbar */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    background-color: none;
+    transition: 0.25s linear;
+    z-index: 100000;
+}
+
+header .logo {
+    position: relative;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2.5px;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    gap: 40px;
+}
+
+header ul li {
+    position: relative;
+    transition: all 0.25s linear;
+
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+header ul li a:hover {
+    color: #fd7e13;
+}
+
+header ul li a.active {
+    color: #fd7e13;
+}
+
+header.shadow {
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+}
+
+
+header.black .logo,
+header.black a {
+    color: #1b1b1b;
+}
+
+/* home */
+#home {
+    min-height: 120vh;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#home::after {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(45%);
+    background-image: url(img/bg-Wat-Rong-Khun.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+#home .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+}
+
+#home .content h1 {
+    text-transform: uppercase;
+}
+
+#home .chiangrai {
+    color: #fff;
+    padding: 25px;
+    width: 50%;
+}
+
+#home .chiangrai h2 {
+    font-size: 2rem;
+    letter-spacing: 2.8px;
+}
+
+#home .tnx h2 i {
+    color: #fd7e13;
+}
+
+#home .text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#home .txt h1 {
+    font-size: 7rem;
+}
+
+#home .chiangrai p {
+    opacity: 0.7;
+}
+
+#home .card {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+    width: 50%;
+}
+
+#home .card h2 {
+    color: #fff;
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+#home .card .box1,
+#home .box2,
+#home .box3,
+#home .box4 {
+    width: 90%;
+    height: 220px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.box1 {
+    background-image: url(img/doy-sa-ngo.jpg);
+}
+
+.box2 {
+    background-image: url(img/tham-luang-khun-nam-nang-non.jpg);
+}
+
+.box3 {
+    background-image: url(img/bg-cafe.png);
+}
+
+.box4 {
+    background-image: url(img/bg-Wat-Rong-Khun.jpg);
+
+}
+
+
+#home .card div {
+    transition: 0.5s;
+}
+
+#home .card div:hover {
+    transition: 0.3s;
+    transform: translateY(-10px);
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+
+#about {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    gap: 20px;
+}
+
+#about .bg,
+#about .detail {
+    width: 50%;
+}
+
+
+
+#about .detail h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+#about .detail p {
+    font-size: 1rem;
+}
+
+#travel {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 100px;
+    text-align: center;
+}
+
+#travel h1 {
+    text-transform: uppercase;
+    font-family: 'Prompt', sans-serif; 
+    font-size: 2.5rem; 
+    font-weight: 500;
+}
+
+#travel .card {
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+#travel .card img {
+    height: 250px;
+    object-position: center;
+    border-radius: 0.5rem;
+}
+
+#travel .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+#travel .card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0.5rem 0 0.5rem;
+
+}
+
+#travel .card .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#travel .card .content .star {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+#travel .card .content .star .check {
+    color: #fd7e13;
+}
+
+#travel .card .content span {
+    display: inline-block;
+    cursor: pointer;
+    padding: .25rem 1rem;
+    border: 2px solid #fd7e13;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
+#travel .card .content span:hover {
+    background-color: hsl(27, 98%, 53%, 0.8);
+    color: #fff;
+    transition: 0.2s all linear;
+}
+
+#modal {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 100000;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    font-family: 'Prompt', sans-serif;
+}
+
+#modal .card-modal {
+    max-width: 54rem;
+    max-height: 36rem;
+    background: #fff;
+    z-index: 100000;
+    border-radius: 5px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+    padding: 20px;
+}
+
+#modal .card-modal .close {
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    color: #fd7e13;
+    font-size: 45px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#modal .card-modal .close:hover {
+    opacity: 0.7;
+}
+
+#modal .card-modal img {
+    min-height: 15rem;
+    object-fit: cover;
+    margin-top: 15px;
+}
+
+#modal .card-modal .content {
+    padding: 20px;
+
+}
+
+#modal .card-modal .name-modal {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Prompt', sans-serif;
+}
+
+#modal .content .ratings {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+#modal .content .ratings .check {
+    color: #fd7e13;
+}
+
+#modal .content .ratings .star {
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal .content .clock {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 0.85rem;
+    gap: 10px;
+    padding: 10px;
+
+}
+
+#modal .content .clock .day {
+    display: flex;
+    gap: 5px;
+}
+
+#modal .content .clock .day .time {
+    display: flex;
+    gap: 2px;
+}
+
+#modal .content .google-maps {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 0.85rem;
+    gap: 5px;
+    padding: 10px;
+    position: relative;
+}
+
+#modal .content .google-maps:hover,
+#modal .content .clock:hover,
+#modal .content .phone:hover {
+    background-color: rgba(0, 0, 0, 0.22);
+}
+
+#modal .content .google-maps a {
+    cursor: pointer;
+}
+
+#modal .content .mark {
+    color: #fd7e13;
+    font-size: 1.15rem;
+}
+
+#modal .content .phone {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 0.85;
+    gap: 10px;
+    padding: 10px;
+}
+
+#modal .content .detail h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+#modal .content .detail span {
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+#modal .content .google-maps .down {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    transform: rotate(-90deg);
+    transition: all 0.25s;
+}
+
+#modal .content .map-modal {
+    padding: 10px 30px;
+    text-align: center;
+    display: none;
+}
+
+#modal .content input:checked~.map-modal {
+    display: block;
+}
+
+#modal .content input:checked+.google-maps .down {
+    transform: rotate(0deg);
+}
+
+#modal .bg-modal {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+
+#customers {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 100px;
+    text-align: center;
+}
+
+#customers h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#customers .card {
+    padding: 10px;
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    text-align: center;
+    height: 450px;
+    width: 350px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+#customers .owl-carousel .owl-stage-outer {
+    padding: 10px;
+}
+
+#customers .card .user {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+#customers .card .user img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+#customers .card .user h3 {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+#customers .card .travel {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+#customers .card .travel h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+#customers .card .review {
+    padding: 1rem;
+    font-weight: 400;
+    color: #333;
+    text-align: start;
+}
+
+.copyright {
+    text-align: center;
+    padding: 20px;
+    background-color: #1b1b1b;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.copyright h3 {
+    letter-spacing: 2.5px;
+}
+
+#modal .content .credit {
+    color: #fd7e13;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#modal .content .credit:hover {
+    color: blue;
+}
+
+
+.menuToggle {
+    position: relative;
+    width: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    display: none;
+}
+
+.menuToggle::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: translateY(-10px);
+    transition: 0.5s;
+    box-shadow: 0 10px #fff;
+}
+
+.menuToggle::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: translateY(10px);
+    transition: 0.5s;
+}
+
+.menuToggle.black::after,
+.menuToggle.black::before {
+    background-color: #1b1b1b;
+
+}
+
+.menuToggle.black::before {
+    box-shadow: 0 10px #1b1b1b;
+}
+
+header.active .menuToggle::before {
+    transform: translateY(0px) rotate(45deg);
+    box-shadow: 0 0 #fd7e13;
+    background-color: #fd7e13;
+}
+
+header.active .menuToggle::after {
+    transform: translateY(0px) rotate(315deg);
+    box-shadow: 0 0 #fd7e13;
+    background-color: #fd7e13;
+}
+
+@media (max-width: 768px) {
+    header .nav {
+        display: none;
+    }
+
+    header .menuToggle {
+        display: flex;
+    }
+
+    header.active ul {
+        position: fixed;
+        left: 0%;
+        top: 70px;
+        width: 100%;
+        height: calc(100vh);
+        background-color: rgba(250, 250, 250, 0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 10000;
+        gap: 20px;
+        transition: 0.25s all;
+    }
+
+    header.active {
+        background-color: #fff;
+    }
+
+    header.active .logo {
+        color: #fd7e13;
+    }
+
+    .nav li a {
+        color: #1b1b1b;
+    }
+
+    header .logo {
+        font-size: 1.75rem;
+
+    }
+
+    #home .content {
+        flex-direction: column;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+    }
+
+    #home .chiangrai {
+        width: 100%;
+
+    }
+
+    #home .chiangrai h2 {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+
+    #home .chiangrai .txt {
+        display: flex;
+        gap: 20px;
+    }
+
+    #home .chiangrai .txt h1 {
+        font-size: 4rem;
+        margin-left: 25px;
+    }
+
+    #home .card {
+        width: 100%;
+    }
+
+    #home .card .box1,
+    #home .box2,
+    #home .box3,
+    #home .box4 {
+        width: 100%;
+        height: 150px;
+    }
+
+    #about {
+        flex-direction: column;
+    }
+
+    #about .bg,
+    #about .detail {
+        width: 100%;
+    }
+
+    #customers .card{
+        width: 250px;
+        height: 350px;
+    }
+    #customers .card .travel{
+        flex-direction: column;
+    }
+
+    #customers .card{
+        font-size: 1rem;
+    }
+    .star{
+        font-size: 0.85rem;
+    }
+
+    #customers .card .review{
+        font-size: 0.85rem;
+    }
+
+    #modal .card-modal{
+        max-height: 30rem;
+        max-width: 40rem;
+    }
+
+    #modal .card-modal .close {
+        font-size: 70px;
+        top: -25px;
+        right: 25px;
+    }
+}
+
+
+@media (max-width : 375px) {
+    header{
+        padding: 20px 20px;
+    }
+    header .logo {
+        font-size: 1rem;
+    }
+
+    .menuToggle {
+        height: 30px;
+    }
+
+    #home .content{
+        padding: 30px 20px;
+    }
+
+    #home .chiangrai{
+        margin-top: 20px;
+    }
+
+    #home .chiangrai h2{
+        font-size: 1.25rem;
+    }
+
+    #home .chiangrai .txt{
+        flex-direction: column;
+    }
+
+    #home .chiangrai .txt h1{
+        font-size: 3.5rem;
+        letter-spacing: 2.5px;
+    }
+
+    #home .card{
+        margin-top: 100px;
+    }
+
+    #about,
+    #travel,
+    #customers{
+        padding: 20px ;
+    }
+
+    #about .detail h1{
+        font-size: 2.5rem;
+    }
+
+    #about .detail p{
+        font-size: 0.85rem;
+    }
+
+    #travel h1 {
+        font-size: 1.75rem;
+    }
+
+    #customers .card{
+        margin: auto;
+    }
+
+    #travel .card-container{
+        padding:10px
+    }
+
+    #modal .card-modal{
+        max-height: 35rem;
+        max-width: 20rem;
+    }
+
+    #modal .card-modal .name-modal{
+        font-size: 2rem;
+    }
+
+    #modal .content .ratings{
+        font-size: 0.8rem;
+    }
+
+    #modal .content .map-modal iframe{
+        width: 150px;
+        height: 150px;
+    }
+
+    #modal .content .google-maps a{
+        display: none;
+    }
+    #modal .content .detail h3{
+        font-size: 1.5rem;
+    }
+
+    #modal .content .detail span{
+        padding: 0;
+        font-size: 0.82rem;
+    }
+}

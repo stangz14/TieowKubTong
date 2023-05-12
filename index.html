@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TieowKubTong</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/owl.theme.default.min.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <header>
+        <a href="" class="logo"> TieowKubTong</a>
+        <div class="menuToggle"></div>
+        <ul class="nav">
+            <li><a href="#home" class="active">หน้าแรก</a></li>
+            <li><a href="#about">เชียงราย</a></li>
+            <li><a href="#travel">สถานที่ท่องเที่ยว</a></li>
+            <li><a href="#customers">รีวิว</a></li>
+        </ul>
+    </header>
+
+    <section id="home">
+        <div class="content">
+            <div class="chiangrai">
+                <div class="tnx">
+                    <h2><i class="fas fa-map-marker-alt"></i> Thailand</h2>
+                </div>
+                <div class="txt">
+                    <h1>chiang</h1>
+                    <h1>rai</h1>
+                </div>
+               
+            </div>
+            <div class="card">
+                <a onclick="openModal(1)">
+                    <div class="box1">
+                        <h2 style="font-family: 'Prompt', sans-serif;">ดอย</h2>
+                    </div>
+                </a>
+                <a onclick="openModal(0)">
+                    <div class="box2">
+                        <h2 style="font-family: 'Prompt', sans-serif;">ถ้ำหลวง</h2>
+                    </div>
+                </a>
+                <a onclick="openModal(3)">
+                    <div class="box3">
+                        <h2>Cafe shop</h2>
+                    </div>
+                </a>
+                <a onclick="openModal(2)">
+                    <div class="box4">
+                        <h2 style="font-family: 'Prompt', sans-serif;">วัด</h2>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about">
+        <div class="bg" >
+            <img src="img/bg-about.jpg" alt="">
+        </div>
+        <div class="detail" >
+            <h1>chiang rai</h1>
+            <br>
+            <p style="font-family: 'Prompt', sans-serif;">คิดจะเที่ยวรับลมหนาว อากาศหนาวๆ ของภาคเหนือ เชียงราย เป็นอีกหนึ่งจังหวัดสุดฮอตที่หลายคนมักนึกถึงเป็นอันดับต้นๆ ด้วยภูมิประเทศที่โอบล้อมด้วยภูเขาสูงเป็นแนวยาวทำให้มีอากาศเย็นสบายตลอดทั้งปี โดยเฉพาะในฤดูหนาวเชียงรายยังคงมีธรรมชาติที่บริสุทธิ์ อุดมสมบูรณ์ไปด้วยป่าไม้และดอกไม้เมืองหนาวที่สวยงาม อีกทั้งเชียงรายยังถือเป็นเมืองแห่งพุทธศิลป์ที่รวบรวมผลงานชิ้นเอกของศิลปินแห่งชาติที่หาดูได้ยาก สำหรับสถานที่ท่องเที่ยวในจังหวัดเชียงรายก็มีให้เลือกมากมาย แล้วถ้ามาที่นี่จะไปเที่ยวที่ไหนได้บ้าง? มาดูกัน.</p>
+        </div>
+    </section>
+
+    <section id="travel">
+        <h1>สถานที่ท่องเที่ยวในเชียงราย</h1>
+        <div class="card-container">
+        </div>
+    </section>
+
+
+    <section id="modal">
+        <div class="bg-modal" onclick="closeModal()" ></div>
+        <div class="card-modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <br>
+            <img class="img-modal" src="img/bg-Wat-Rong-Khun.jpg" alt="">
+            <div class="content">
+                <div class="name-modal">wat</div>
+                <div class="ratings">
+                    <p class="score-modal">4.0</p>
+                    <div class="star-modal">
+                    </div>
+                </div>
+                <hr>
+                <div class="clock">
+                    <i class="fa-sharp fa-solid fa-clock mark"></i>
+                    <div class="every-day">
+                        <div class="day">
+                            <p>Every day</p>
+                            <div class="time">
+                                <p class="timeopen-modal">8:30</p>
+                                <p>-</p>
+                                <p class="timeclose-modal">16:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="checkbox" name="" id="maps-show" style="display: none;">
+                <label class="google-maps" for="maps-show">
+                    <i class="fas fa-map-marker-alt mark"></i>
+                    <a class="gps-modal">W4M5+65M Unnamed Road ตำบล อัยเยอร์เวง อำเภอเบตง
+                        ยะลา 95110</a>
+                    <i class="fa-solid fa-angle-down mark down"></i>
+                </label>
+                <div class="map-modal">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31747.800847503055!2d101.1086804!3d5.9290454!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31b4eddd957c2853%3A0x3cabc210f3c5e2fb!2z4Lir4Lih4Li54LmI4Lia4LmJ4Liy4LiZ4Lib4Li04Lii4Liw4Lih4Li04LiV4LijIDM!5e0!3m2!1sth!2sth!4v1683803405273!5m2!1sth!2sth"
+                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <br>
+                <div class="detail">
+                    <h3>Detail</h3>
+                    <span class="des-modal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam aliquid aspernatur dolore,
+                        voluptas dolores molestiae quaerat repudiandae voluptatibus fugit tenetur. Sit, obcaecati! Sit,
+                        assumenda molestiae? Placeat doloremque odit nam voluptate! Officiis consequatur inventore eum
+                        dolor tempore et totam numquam at blanditiis perspiciatis saepe consectetur aspernatur culpa
+                        doloremque, provident, dignissimos nobis aliquam id! Nulla eius mollitia maiores. Eveniet
+                        tempore beatae esse deserunt rem quas. Excepturi eius ad asperiores eligendi officia deserunt
+                        exercitationem voluptatibus quaerat vero odio, maiores modi alias dicta laboriosam praesentium?
+                        Eius esse odit accusantium, sapiente cumque voluptate, incidunt molestias eos cupiditate sequi
+                        repellat dolores aspernatur officiis, perspiciatis soluta necessitatibus.
+
+                    </span>
+                    
+                </div>
+                <br>
+                <a href="" target="_blank" class="credit">ที่มาของข้อมูล</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="customers">
+        <h1 style="font-family: 'Prompt', sans-serif; font-size: 2.5rem; font-weight: 500;">รีวิว</h1>
+        <div class="owl-carousel owl-theme">
+            <div class="card">
+                <div class="user">
+                    <img src="img/user-1.jpg" alt="">
+                    <h3 class="name-user">Phanuwut</h3>
+                </div>
+                
+                <div class="travel">
+                    <h3 class="name-travel">I’m waiting for you Cafe & Bakery</h3>
+                    <div class="star">
+                        <i class="fa-solid fa-star check"></i>
+                        <i class="fa-solid fa-star check"></i>
+                        <i class="fa-solid fa-star check"></i>
+                        <i class="fa-solid fa-star check"></i>
+                        <i class="fa-solid fa-star check"></i>
+                    </div>
+                </div>
+                <hr>
+                <div class="review">
+                    Lเป็นร้านเล็กๆที่อยู่ในซอย บรรยากาศดีมุมถ่ายรูปเยอะ น้ำอร่อยราคาไม่แพง แถมขนมอร่อย
+                    และที่สำคัญร้านมีบริการทำเล็บสำหรับสาวๆ ส่วนผู้ชายอย่างเราก็นั่งรอไปครับ
+                    shortcake strawberry เนื้อแน่นไปหน่อย แต่อร่อยมาก 4.7/5
+                    ในด้านของกาแฟ Americano ทำได้ดีครับ 4.5/5
+                    เมนู Mocktail Summer Sweet 5/5
+                    ถ้ามองโดยรวม ผมให้ 5/5 recommend 👍
+                    ปล.ณ ปัจจุบันเมล็ดกาแฟในร้านมีแต่ปัจจุบันในร้านมีแต่คั่วเข้ม
+                </div>
+            </div>
+            <div class="card">
+                <div class="user">
+                    <img src="img/user-2.jpg" alt="">
+                    <h3 class="name-user">TongLnWZa007</h3>
+                </div>
+                
+                <div class="travel">
+                    <h3 class="name-travel">วัดร่องขุน</h3>
+                    <div class="star">
+                        <i class="fa-solid fa-star check"></i>
+                        <i class="fa-solid fa-star check"></i>
+                        <i class="fa-solid fa-star check"></i>
+                        <i class="fa-solid fa-star check"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <hr>
+                <div class="review">
+                    เป็นวัดที่มีสถาปัตยกรรมสวยแปลกตามาก มีปริศนาธรรมและความหมายซ่อนอยู่มากมาย เข้าฟรีสำหรับคนไทย มีค่าธรรมเนียมค่าเข้าสำหรับต่างชาติ การบริหารจัดการดี ห้องน้ำสวยสะอาดมาก สถานที่ค่อนข้างกว้าง ควรมาตอนที่แดดไม่จัดอากาศไม่ร้อน มีที่จอดรถทั้งด้านหน้าก่อนถึงวัดและลาดจอดรถด้านหลัง มีร้านอาหาร กาแฟ ของฝากด้านหน้าวัด
+                </div>
+            </div>
+            <div class="card">
+                <div class="user">
+                    <img src="img/user-3.jpg" alt="">
+                    <h3 class="name-user">unknown</h3>
+                </div>
+                
+                <div class="travel">
+                    <h3 class="name-travel">อุทยานแห่งชาติถ้ำหลวง-ขุนน้ำนางนอน</h3>
+                    <div class="star">
+                        <i class="fa-solid fa-star check"></i>
+                        <i class="fa-solid fa-star "></i>
+                        <i class="fa-solid fa-star "></i>
+                        <i class="fa-solid fa-star "></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <hr>
+                <div class="review">
+                    หากจุดประสงค์การเเดินทางมาถ้ำหลวงคือ การเดินตามรอยน้องๆหมูป่าไปดูเส้นทางที่น้องเดินเข้าไปพลัดหลงและติดอยู่ในถ้ำ  ไม่แนะนำครับ  เอาเวลาที่มีจำกัดไปเที่ยวที่อื่นที่น่าสนใจมากกว่านี้ดีกว่า  เชียงรายยังมีจุดท่องเที่ยวที่น่าสนใจกว่านี้อีกมาก  ประสบการณ์การทางเดินเข้าถำ้มืดและค่อนข้างชื้นแฉะ  หินงอกหินย้อยไม่ได้สวยงาม  มีไฟเป็นระยะ และจุดอธิบายเส้นทางและด้านหน้าถ้ำมีจุดแสดงสิิ่งของส่วนตัวและอุปกรณ์เครื่องที่ใช้ในการเข้าช่วยเหลือน้องๆหมูป่าขนาดย่อม   อนึ่งเจ้าหน้าที่อำนวยความสะดวกในการรับส่งจากถนนหลักมายังทางเข้าถ้ำโดยไม่มีค่าธรรมเนียม  มีบริการถ่ายรูปแบบเอามาขายเราทีหลัง  แนะนำว่าถ้าอยากได้ของที่ระลึกแบบนี้ให้ตั้งใจถ่ายไปเลยดีกว่าจะได้จัดท่าทางตามความชอบไม่ใช่เป็นการแอบถ่าย  โดยส่วนตัวไม่ได้ประทับใจอะไรเป็นพิเศษ  ใครอยากไปเชิญครับถือว่าอุดหนุนการท่องเที่ยวชุมชน
+                </div>
+            </div>
+            <div class="card">
+                <div class="user">
+                    <img src="img/user-4.jpg" alt="">
+                    <h3 class="name-user">Tong Tong</h3>
+                </div>
+                
+                <div class="travel">
+                    <h3 class="name-travel">Error</h3>
+                    <div class="star">
+                        <i class="fa-solid fa-star check"></i>
+                        <i class="fa-solid fa-star check"></i>
+                        <i class="fa-solid fa-star check"></i>
+                        <i class="fa-solid fa-star check"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <hr>
+                <div class="review">
+                    error
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <div class="copyright">
+        <h3>&copy; TieowKubTong</h3>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="assets/owl.carousel.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
