@@ -47,6 +47,10 @@ img {
     object-fit: cover;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 /* 49c6e5-54defd-fffbfa-00bd9d-8bd7d2 */
 
 /* navbar */
@@ -674,6 +678,15 @@ header.active .menuToggle::after {
     background-color: #fd7e13;
 }
 
+@media (max-width: 1024px) {
+    #home .txt h1{
+        font-size: 5rem;
+    }
+
+    #home .card .box1, #home .box2, #home .box3, #home .box4{
+        width: 100%;
+    }
+}
 @media (max-width: 768px) {
     header .nav {
         display: none;
@@ -796,7 +809,7 @@ header.active .menuToggle::after {
 }
 
 
-@media (max-width : 375px) {
+@media (max-width : 450px) {
     header{
         padding: 20px 20px;
     }
